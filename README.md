@@ -1,3 +1,4 @@
+<pre>
 # Current Keymap Configuration  
  -----------------------------------------------------------------------------------------  
  |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |  
@@ -21,7 +22,7 @@ SYMBOL / RAISE:
  | SHFT |     |     | F14 |VOLDN|     |   |  _  |  +  |  {  |  }  | "|" |  ~   |  
                     | GUI |     | SPC |   | ENT |     | ALT |  
   
-  
+  </pre>
   
 
 # Corne-ish Zen V2 Custom Configuration
