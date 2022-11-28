@@ -1,3 +1,28 @@
+# Current Keymap Configuration
+ -----------------------------------------------------------------------------------------
+ |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+ | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+ | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT |
+                    | GUI | LWR | SPC |   | SPC | RSE  | ALT |
+
+NUMBER / LOWER:
+-----------------------------------------------------------------------------------------
+ |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+ | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     | LFT |  UP | RGT |     |      |
+ | SHFT |     |     |     |     |     |   |     |     | DWN |     |     | ESC  |
+                    | GUI |     | SPC |   | ENT |     | ALT |
+
+
+SYMBOL / RAISE:
+ -----------------------------------------------------------------------------------------
+ |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+ | CTRL |     |     | F15 |VOLUP| MUTE|   |  -  |  =  |  [  |  ]  |  \  |  `   |
+ | SHFT |     |     | F14 |VOLDN|     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+                    | GUI |     | SPC |   | ENT |     | ALT |
+
+
+
+
 # Corne-ish Zen V2 Custom Configuration
 
 ![Corne-ish Zen Logo](img/Zen_R3_sticker.png)
