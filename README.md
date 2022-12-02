@@ -4,7 +4,7 @@
  |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |  
  | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |  
  | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT |  
-                    | GUI | LWR | SPC |   | SPC | RSE  | ALT |  
+                    | GUI | LWR | ENT |   | SPC | RSE  | ALT |  
   
   
 NUMBER / LOWER:  
