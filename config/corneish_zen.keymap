@@ -2,15 +2,27 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+// Change Log:
 // Moved Esc to Numbers Layer. Added Right Shift in place of Esc on main layer.
 // Changed right long thumb to Space. Enter now accessible on right thumb of other layers. May move to left long thumb.
 // Moved arrow keys on NUMBER layer to follow typical T but it is inverted 
+// Added tri_layer for BT config. This helps avoid accidental BT changes when using number layer
 
 
 / {
   chosen {
     zmk,matrix_transform = &default_transform;
     //zmk,matrix_transform = &five_column_transform;
+  };
+};
+
+/ {
+  conditional_layers {
+      compatible = "zmk,conditional-layers";
+      tri_layer {
+          if-layers = <1 2>;
+	  then-layer = <3>;
+      };
   };
 };
 
@@ -61,5 +73,20 @@
                     	     &kp LGUI &trans   &kp SPACE   	&kp RET   &trans    &kp RALT
                         >;
                 };
+                tri_layer {
+                        label = "BTCON";
+// -----------------------------------------------------------------------------------------
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    | GUI |     |     |   |     |     |     |
+                        bindings = <
+   &trans    &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans   &trans &trans &trans &trans &trans
+   &trans  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
+                          	        &kp LGUI     &trans       &trans      &trans  &trans   &trans
+                        >;
+                };
+		
         };
 };
