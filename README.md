@@ -29,7 +29,7 @@ BTCONF / TRI_LAYER:
  | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |      |  
  |      |     |     |     |     |     |   |     |     |     |     |     |      |  
                     | GUI |     |     |   |     |     |     |  
-  </pre>
+
 
 MEDIA: 
 -----------------------------------------------------------------------------------------
@@ -37,7 +37,9 @@ MEDIA:
 |      |     |     |     |     |     |   |     |     |     |     |     |      |
 |      |     |     |     |     |     |   |     |     |     |     |     |      |
        |BRIGHT DWN | BRIGHT UP |     |   |MUTE |VOLUP|VOLDN|
-  
+
+
+</pre>
 
 # Corne-ish Zen V2 Custom Configuration
 
