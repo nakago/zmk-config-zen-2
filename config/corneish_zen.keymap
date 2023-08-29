@@ -2,12 +2,23 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define DEFAULT 0
+#define LOWER 1
+#define RAISE 2
+#define BTCONF 3
+#define MEDIA 4
+
+
 // Change Log:
 // Moved Esc to Numbers Layer. Added Right Shift in place of Esc on main layer.
 // Changed right long thumb to Space. Enter now accessible on right thumb of other layers. May move to left long thumb.
 // Moved arrow keys on NUMBER layer to follow typical T but it is inverted 
 // Added tri_layer for BT config. This helps avoid accidental BT changes when using number layer
-
+// Changed default long keys to both space
+// Swapped SPACE and RET on raise/lower
+// Add layer-tap for SEMI to activate new Media layer
+// Added VOL UP/DOWN and Brightness up/down (F15/F14) to Media layer 
+// Comented out Tap Dance
 
 / {
   chosen {
@@ -26,17 +37,18 @@
   };
 };
 
-/ {
-	behaviors {
-  		td0: tap_dance_0 {
-			compatible = "zmk,behavior-tap-dance";
-			label = "TAP_DANCE_0";
-			#binding-cells = <0>;
-			tapping-term-ms = <200>;
-			bindings = <&kp SEMI>, <&mo 1>;
-		};
- 	};		
-};
+// / {
+//	behaviors {
+//  		td0: tap_dance_0 {
+//			compatible = "zmk,behavior-tap-dance";
+//			label = "TAP_DANCE_0";
+//			#binding-cells = <0>;
+//			tapping-term-ms = <200>;
+//			bindings = <&kp SEMI>, <&mo 1>;
+//		};
+// 	};		
+// }; 
+
 &lt {
 	tapping-term-ms = <200>;
 };
@@ -54,7 +66,7 @@
 //                    | GUI | LWR | SPC |   | SPC | RSE  | ALT |
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &lt 1 SEMI     &kp SQT
+   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &lt MEDIA SEMI     &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
                   &kp LGUI &mo 1 &kp SPACE   &kp SPACE &mo 2 &kp RALT
                         >;
@@ -102,6 +114,23 @@
                           	        &kp LGUI     &trans       &trans      &trans  &trans   &trans
                         >;
                 };
+
+                media_layer {
+                        label = "MEDIA";
+// -----------------------------------------------------------------------------------------
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+//        |BRIGHT DWN | BRIGHT UP |     |   |MUTE |VOLUP|VOLDN|
+                        bindings = <
+   &trans  &trans  &trans  &trans  &trans  &trans        &trans   &trans   &trans  &trans  &trans  &trans
+   &trans  &trans  &trans  &trans  &trans  &trans        &trans   &trans   &trans  &trans  &trans  &trans
+   &trans  &trans  &trans  &trans  &trans  &trans        &trans   &trans   &trans  &trans  &trans  &trans
+                           &kp F14  &kp F15  &trans   	 &kp C_MUTE  &kp C_VOL_UP  &kp C_VOL_DN
+                        >;
+                };
+			
+
 		
         };
 };
