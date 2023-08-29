@@ -30,6 +30,13 @@ BTCONF / TRI_LAYER:
  |      |     |     |     |     |     |   |     |     |     |     |     |      |  
                     | GUI |     |     |   |     |     |     |  
   </pre>
+
+MEDIA: 
+-----------------------------------------------------------------------------------------
+|      |     |     |     |     |     |   |     |     |     |     |     |      |
+|      |     |     |     |     |     |   |     |     |     |     |     |      |
+|      |     |     |     |     |     |   |     |     |     |     |     |      |
+       |BRIGHT DWN | BRIGHT UP |     |   |MUTE |VOLUP|VOLDN|
   
 
 # Corne-ish Zen V2 Custom Configuration
