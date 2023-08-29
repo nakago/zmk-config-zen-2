@@ -36,10 +36,10 @@
 			bindings = <&kp SEMI>, <&kp N1>;
 		}
  	}		
-#}
+
     	  
 
-#/ {
+
         keymap {
                 compatible = "zmk,keymap";
 
