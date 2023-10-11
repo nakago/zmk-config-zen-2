@@ -19,6 +19,7 @@
 // Add layer-tap for SEMI to activate new Media layer
 // Added VOL UP/DOWN and Brightness up/down (F15/F14) to Media layer 
 // Comented out Tap Dance
+// Added arrow keys to left side NUMBER layer to facilitate screen changing via keyboard shortcuts
 
 / {
   chosen {
@@ -75,13 +76,13 @@
                         label = "NUMBER";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// |      |     |     |     |     |     |   |     | LFT |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     | DWN |     |     | ESC  |
+// |      |     | LFT | UP  | RGT |     |   |     | LFT |  UP | RGT |     |      |
+// | SHFT |     |     | DWN |     |     |   |     |     | DWN |     |     | ESC  |
 //                    | GUI |     | ENT |   | SPC |     | ALT |
                         bindings = <
    &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &trans &trans &trans &trans &trans &trans   &trans   &kp LEFT &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &kp DOWN &trans    &trans &kp ESC
+   &trans &trans &kp LEFT &kp UP &kp RIGHT &trans   &trans   &kp LEFT &kp UP &kp RIGHT &trans &trans
+   &kp LSHFT  &trans       &trans       &kp DOWN       &trans       &trans         &trans   &trans   &kp DOWN &trans    &trans &kp ESC
                           	        &kp LGUI     &trans       &kp RET      &kp SPACE  &trans   &kp RALT
                         >;
                 };
